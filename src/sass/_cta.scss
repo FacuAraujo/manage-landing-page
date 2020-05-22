@@ -1,0 +1,41 @@
+.cta {
+  position: relative;
+  margin-top: 1em;
+  padding: 6em 1em;
+  background: url('../../static/images/bg-simplify-section-mobile.svg')
+      no-repeat center left,
+    var(--BrightRed);
+  text-align: center;
+}
+
+.title--white {
+  color: var(--VaryLightGray);
+}
+
+.button-cta {
+  background-color: var(--VaryLightGray);
+  color: var(--BrightRed);
+  font-weight: 700;
+  box-shadow: 0 2px 2px 0px rgba(rgb(29, 30, 37), 0.1);
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  .cta {
+    padding: 4em 1em;
+    background: url('../../static/images/bg-simplify-section-desktop.svg')
+        no-repeat bottom right,
+      var(--BrightRed);
+  }
+
+  .cta-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      text-align: left;
+      width: 500px;
+    }
+  }
+}

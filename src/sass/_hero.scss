@@ -1,0 +1,43 @@
+.hero-description {
+  text-align: center;
+  .copy {
+    padding: 0 1em;
+  }
+}
+
+.hero-image {
+  text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+  .hero {
+    padding: 6em 0 2em 0;
+  }
+  .hero-content {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    grid-template-areas: 'description image';
+    grid-gap: 5em;
+    align-items: center;
+    .title {
+      font-size: 3.5em;
+    }
+  }
+
+  .hero-image {
+    grid-area: image;
+  }
+
+  .hero-description {
+    grid-area: description;
+    text-align: left;
+    .copy {
+      margin: 1.5em 0 0 0;
+      padding: 0;
+      width: 350px;
+    }
+    .button {
+      margin: 3em 0 0 0;
+    }
+  }
+}

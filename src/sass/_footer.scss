@@ -1,0 +1,126 @@
+.footer {
+  padding: 3em 0 0.5em 0;
+  background-color: var(--VeryDarkBlue);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas:
+    'input input' 'main-menu second-menu' 'social social' 'logo logo'
+    'copy copy';
+}
+
+.input-container {
+  grid-area: input;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  input {
+    display: block;
+    width: 100%;
+    padding: 1em 2em;
+    border-radius: 2.5em;
+    border: none;
+    font-family: 'Be Vietnam', sans-serif;
+    &::placeholder {
+      color: var(--DarkGrayishBlue);
+    }
+  }
+}
+
+.button--footer {
+  box-shadow: none;
+  padding: 1em 2.4em;
+  margin: 0 0 0 0.8em;
+  text-transform: uppercase;
+}
+
+.footer-menu {
+  padding: 2.2em 0 1em 0;
+  ul {
+    list-style: none;
+    li {
+      margin-bottom: 1.2em;
+      font-weight: 400;
+      font-size: 0.9em;
+      color: var(--VaryLightGray);
+    }
+  }
+}
+
+.footer-main-menu {
+  grid-area: main-menu;
+}
+
+.footer-second-menu {
+  grid-area: second-menu;
+}
+
+.social-icons {
+  grid-area: social;
+  text-align: center;
+  img {
+    margin: 0.7em;
+    width: 30px;
+  }
+}
+
+.logo {
+  grid-area: logo;
+  padding: 2em 0;
+  text-align: center;
+}
+
+.copyright {
+  grid-area: copy;
+  text-align: center;
+  font-size: 0.8em;
+  color: var(--DarkGrayishBlue);
+}
+
+@media screen and (min-width: 1024px) {
+  .footer {
+    padding: 4em 0 3em 0;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 'logo main-menu second-menu input' 'social main-menu second-menu copy';
+    grid-gap: 0em;
+  }
+
+  .logo {
+    text-align: left;
+    padding: 0;
+  }
+
+  .social-icons {
+    text-align: left;
+    img {
+      width: 1.2em;
+      margin: 0.2em;
+      cursor: pointer;
+    }
+  }
+
+  .footer-menu {
+    padding: 0;
+    ul {
+      margin: 0;
+      li {
+        cursor: pointer;
+        &:hover {
+          color: var(--BrightRed);
+        }
+      }
+    }
+  }
+
+  .copyright {
+    margin-top: 2em;
+    text-align: right;
+  }
+}

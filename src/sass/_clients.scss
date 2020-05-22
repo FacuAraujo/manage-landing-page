@@ -1,0 +1,51 @@
+.clients {
+  text-align: center;
+  .title {
+    margin-bottom: 1em;
+  }
+}
+
+.client {
+  margin-bottom: 1em;
+  .client-content {
+    padding: 2.6em 1em 1.5em 1em;
+    background-color: var(--VaryLightGray);
+  }
+  img {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 0;
+    transform: translateY(50%);
+  }
+  h3 {
+    color: var(--DarkBlue);
+    font-size: 1em;
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  height: auto;
+}
+
+.clients .swiper-pagination {
+  position: static;
+  margin-bottom: 1em;
+  .swiper-pagination-bullet {
+    background: inherit;
+    border: 1px solid var(--BrightRed);
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active {
+    background: var(--BrightRed);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .client {
+    .copy {
+      width: 400px;
+      margin: 0 auto;
+    }
+  }
+}
